@@ -3,7 +3,7 @@
   "displayName": "Next.js Productivity Tools",
   "description": "Feature generator and translation key extractor and other for Next.js projects ",
   "author": "Rajab Alkahef",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "rajab-alkahef",
   "engines": {
     "vscode": "^1.85.0"
