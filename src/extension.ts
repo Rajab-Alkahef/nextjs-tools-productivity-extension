@@ -167,6 +167,13 @@ function openTranslationExtractor(context: vscode.ExtensionContext): void {
     vscode.window.showInformationMessage('Opening Translation Key Extractor...');
     spawnPythonTool(context, 'translation_extractor/translation_extractor.py');
 }
+/**
+ * Opens the Postman to Endpoints Converter GUI
+ */
+function openPostmanToEndpointsConverter(context: vscode.ExtensionContext): void {
+    vscode.window.showInformationMessage('Opening Postman to Endpoints Converter...');
+    spawnPythonTool(context, 'postman_to_endpoints/main.py');
+}
 
 /**
  * This method is called when your extension is activated
@@ -184,8 +191,12 @@ export function activate(context: vscode.ExtensionContext): void {
         'nextjsTools.openTranslationExtractor',
         () => openTranslationExtractor(context)
     );
+    const postmanToEndpointsConverterCommand = vscode.commands.registerCommand(
+        'nextjsTools.openPostmanToEndpointsConverter',
+        () => openPostmanToEndpointsConverter(context)
+    );
 
-    context.subscriptions.push(featureGeneratorCommand, translationExtractorCommand);
+    context.subscriptions.push(featureGeneratorCommand, translationExtractorCommand, postmanToEndpointsConverterCommand);
 
     // Show welcome message
     vscode.window.showInformationMessage(

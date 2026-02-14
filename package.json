@@ -23,7 +23,8 @@
   ],
   "activationEvents": [
     "onCommand:nextjsTools.openFeatureGenerator",
-    "onCommand:nextjsTools.openTranslationExtractor"
+    "onCommand:nextjsTools.openTranslationExtractor",
+    "onCommand:nextjsTools.openPostmanToEndpointsConverter"
   ],
   "main": "./out/extension.js",
   "icon": "media/icon.png",
@@ -37,6 +38,11 @@
       {
         "command": "nextjsTools.openTranslationExtractor",
         "title": "Next.js Tools: Open Translation Extractor",
+        "category": "Next.js Tools"
+      },
+      {
+        "command": "nextjsTools.openPostmanToEndpointsConverter",
+        "title": "Next.js Tools: Open Postman to Endpoints Converter",
         "category": "Next.js Tools"
       }
     ]
