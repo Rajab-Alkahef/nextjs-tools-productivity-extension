@@ -176,6 +176,14 @@ function openPostmanToEndpointsConverter(context: vscode.ExtensionContext): void
 }
 
 /**
+ * Opens the Snippet Viewer GUI
+ */
+function openSnippetViewer(context: vscode.ExtensionContext): void {
+    vscode.window.showInformationMessage('Opening Snippet Viewer...');
+    spawnPythonTool(context, 'snippet_viewer/snippet_viewer.py');
+}
+
+/**
  * This method is called when your extension is activated
  */
 export function activate(context: vscode.ExtensionContext): void {
@@ -195,8 +203,12 @@ export function activate(context: vscode.ExtensionContext): void {
         'nextjsTools.openPostmanToEndpointsConverter',
         () => openPostmanToEndpointsConverter(context)
     );
+    const snippetViewerCommand = vscode.commands.registerCommand(
+        'nextjsTools.openSnippetViewer',
+        () => openSnippetViewer(context)
+    );
 
-    context.subscriptions.push(featureGeneratorCommand, translationExtractorCommand, postmanToEndpointsConverterCommand);
+    context.subscriptions.push(featureGeneratorCommand, translationExtractorCommand, postmanToEndpointsConverterCommand, snippetViewerCommand);
 
     // Show welcome message
     vscode.window.showInformationMessage(

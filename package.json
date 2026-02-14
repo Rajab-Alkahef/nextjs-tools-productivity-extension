@@ -3,7 +3,7 @@
   "displayName": "Next.js Productivity Tools",
   "description": "Feature generator and translation key extractor and other for Next.js projects ",
   "author": "Rajab Alkahef",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "publisher": "rajab-alkahef",
   "engines": {
     "vscode": "^1.85.0"
@@ -24,7 +24,8 @@
   "activationEvents": [
     "onCommand:nextjsTools.openFeatureGenerator",
     "onCommand:nextjsTools.openTranslationExtractor",
-    "onCommand:nextjsTools.openPostmanToEndpointsConverter"
+    "onCommand:nextjsTools.openPostmanToEndpointsConverter",
+    "onCommand:nextjsTools.openSnippetViewer"
   ],
   "main": "./out/extension.js",
   "icon": "media/icon.png",
@@ -43,6 +44,11 @@
       {
         "command": "nextjsTools.openPostmanToEndpointsConverter",
         "title": "Next.js Tools: Open Postman to Endpoints Converter",
+        "category": "Next.js Tools"
+      },
+      {
+        "command": "nextjsTools.openSnippetViewer",
+        "title": "Next.js Tools: Open Snippet Viewer",
         "category": "Next.js Tools"
       }
     ]
