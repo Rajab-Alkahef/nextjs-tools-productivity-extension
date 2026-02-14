@@ -5,7 +5,7 @@
 A VS Code extension that provides powerful productivity tools for Next.js development:
 - **Feature Generator**: Generate complete Next.js feature structures with a GUI
 - **Translation Extractor**: Extract, find missing, and manage translation keys
-- **Other Feature**: Coming Soon....
+- **Postman to Endpoints Converter**: Convert Postman collections to TypeScript endpoint classes
 
 ## Features
 
@@ -20,6 +20,14 @@ A VS Code extension that provides powerful productivity tools for Next.js develo
 - Detect missing translation keys
 - Find unused translation keys
 - Update translation files automatically
+
+### 🔗 Postman to Endpoints Converter
+- Convert Postman collection JSON files to TypeScript endpoint classes
+- Select specific folders from your Postman collection to convert
+- Generate TypeScript abstract classes with static endpoint properties
+- Preview generated code before saving
+- Copy to clipboard or save directly to `.ts` files
+- Automatically handles Postman variables and URL formatting
 
 ## Requirements
 
@@ -51,6 +59,17 @@ A VS Code extension that provides powerful productivity tools for Next.js develo
 6. Select options (extract keys, find hardcoded, find missing, etc.)
 7. Click "Scan"
 8. Review results and update translation files
+
+### Postman to Endpoints Converter
+
+1. Open Command Palette (Ctrl+Shift+P)
+2. Type "Next.js Tools: Open Postman to Endpoints Converter"
+3. Click "Browse Postman Collection" and select your Postman collection JSON file
+4. Select the folders you want to convert (checkboxes on the left)
+5. Click "Generate" to preview the TypeScript code
+6. Review the generated code in the preview panel
+7. Use "Copy to Clipboard" to copy the code, or "Save .ts File" to save it directly
+8. The generated code will contain TypeScript abstract classes with static endpoint properties organized by folder
 
 ## Extension Settings
 
