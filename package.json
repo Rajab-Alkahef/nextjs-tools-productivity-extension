@@ -1,0 +1,62 @@
+{
+  "name": "nextjs-productivity-tools",
+  "displayName": "Next.js Productivity Tools",
+  "description": "Feature generator and translation key extractor and other for Next.js projects ",
+  "author": "Rajab Alkahef",
+  "version": "1.0.1",
+  "publisher": "rajab-alkahef",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other",
+    "Snippets"
+  ],
+  "keywords": [
+    "nextjs",
+    "react",
+    "typescript",
+    "generator",
+    "translation",
+    "i18n",
+    "productivity"
+  ],
+  "activationEvents": [
+    "onCommand:nextjsTools.openFeatureGenerator",
+    "onCommand:nextjsTools.openTranslationExtractor"
+  ],
+  "main": "./out/extension.js",
+  "icon": "media/icon.png",
+  "contributes": {
+    "commands": [
+      {
+        "command": "nextjsTools.openFeatureGenerator",
+        "title": "Next.js Tools: Open Feature Generator",
+        "category": "Next.js Tools"
+      },
+      {
+        "command": "nextjsTools.openTranslationExtractor",
+        "title": "Next.js Tools: Open Translation Extractor",
+        "category": "Next.js Tools"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Rajab-Alkahef/nextjs-tools-productivity-extension"
+  },
+  "license": "MIT"
+}
